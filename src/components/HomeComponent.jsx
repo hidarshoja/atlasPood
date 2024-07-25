@@ -20,10 +20,10 @@ const Home = () => {
       <MobileMenu />
       <HeaderComponet />
       <main className="mx-auto mt-8 max-w-2xl px-4 pb-16 sm:px-6 sm:pb-24 lg:max-w-7xl lg:px-8">
-        <div className="flex flex-col lg:flex-row lg:gap-x-4">
+        <div className="flex flex-col lg:flex-row lg:gap-x-10">
           <BoxImgContent onImageSelect={handleImageSelect} />
           {/* Product Form */}
-          <div className="mt-8 lg:w-4/12">
+          <div className="lg:w-6/12">
             <BoxFormContent selectedImageId={selectedImageId} />
           </div>
         </div>

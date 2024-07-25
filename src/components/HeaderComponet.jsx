@@ -48,22 +48,22 @@ export default function HeaderComponent() {
                   <a
                     key={page.name}
                     href={page.href}
-                    className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                    className="flex items-center text-sm font-medium text-brown3"
                   >
                     {page.name}
                   </a>
                 ))}
                 <button
                 onClick={handleLogout}
-                className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                className="flex items-center text-sm font-medium text-brown3"
                 >logout</button>
               </div>
             </div>
 
             {/* Logo */}
             <a href="#" className="flex flex-col text-center">
-              <span className="border-b text-lg font-semibold">atlas pood</span>
-              <span className="text-xs">HOME FURNISHING</span>
+              <span className="border-b text-lg font-semibold text-brown3">atlas pood</span>
+              <span className="text-xs text-brown3">HOME FURNISHING</span>
             </a>
 
             <div className="flex flex-1 items-center justify-end">
@@ -72,7 +72,7 @@ export default function HeaderComponent() {
                 href="#"
                 className="ml-6 p-2 text-gray-400 hover:text-gray-500 block"
               >
-                <span className="sr-only">Search</span>
+                <span className="sr-only text-brown3">Search</span>
                 <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true" />
               </a>
 

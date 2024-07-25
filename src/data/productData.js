@@ -41,18 +41,18 @@ const product = {
       },
     ],
     colors: [
-      { name: 'Black', bgColor: 'bg-gray-900', selectedColor: 'ring-gray-900' },
-      { name: 'Grey', bgColor: 'bg-gray-400', selectedColor: 'ring-gray-400' },
-      { name: 'white', bgColor: 'bg-gray-100', selectedColor: 'ring-gray-400' },
-      { name: 'red', bgColor: 'bg-red-400', selectedColor: 'ring-red-400' },
-      { name: 'blue', bgColor: 'bg-blue-400', selectedColor: 'ring-blue-400' },
+      { name: 'Black', bgColor: '/img/bgbox1.png', selectedColor: 'ring-gray-900' },
+      { name: 'Grey', bgColor: '/img/bgbox2.png', selectedColor: 'ring-gray-400' },
+      { name: 'white', bgColor: '/img/bgbox3.png', selectedColor: 'ring-gray-400' },
+      { name: 'red', bgColor: '/img/bgbox4.png', selectedColor: 'ring-red-400' },
+      
     ],
     sizes: [
-      { name: '130CM * 320CM', inStock: true },
+      { name: '130CM * 320CM', inStock: false },
       { name: '130CM * 300CM', inStock: false },
-      { name: '280CM * 300CM', inStock: false },
-      { name: '300CM * 120CM', inStock: true },
-      { name: '200CM * 120CM', inStock: true },
+      { name: '280CM * 300CM', inStock: true },
+      { name: '300CM * 120CM', inStock: false },
+     
     ],
     description: `
       <p>The Basic tee is an honest new take on a classic. The tee uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewn locally, with a special dye technique that gives each tee it's own look.</p>

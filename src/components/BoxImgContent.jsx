@@ -36,14 +36,14 @@ export default function BoxImgContent({ onImageSelect }) {
               />
           ))}
         </div>
-        <div className="flex items-center justify-center flex-wrap gap-2 sm:gap-4 md:gap-6 lg:flex-col lg:gap-4">
+        <div className="hidden lg:flex items-center justify-center flex-wrap gap-2 sm:gap-4 md:gap-6 lg:flex-col lg:gap-4">
           {product.images.map((image) => (
             <img
               key={image.id}
               src={image.imageSrc}
               alt={image.imageAlt}
               className={classNames(
-                "cursor-pointer border border-gray-600 p-1",
+                "cursor-pointer  p-1",
                 "w-[50px] h-[50px]",
                 "sm:w-[100px] sm:h-[100px]",
                 "lg:w-auto lg:h-auto"

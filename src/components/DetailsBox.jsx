@@ -13,9 +13,9 @@ export default function DetailsBox() {
     return (
         <div className="max-w-xl mx-auto mt-6">
           {faqs.map((faq, index) => (
-            <div key={index} className="border-t border-gray-300 py-2">
+            <div key={index} className="border-t border-brown5 py-2">
               <h3 
-                className="cursor-pointer text-lg font-medium text-gray-700 flex justify-between items-center" 
+                className="cursor-pointer font-semibold text-base  text-brown3 flex justify-between items-center" 
                 onClick={() => toggleAccordion(index)}
               >
                 {faq.question}
