@@ -6,10 +6,14 @@ export default function BoxImgContent({ onImageSelect }) {
   const [selectedImageId, setSelectedImageId] = useState(
     product.images.find((image) => image.primary).id
   );
+  const [activeImageId, setActiveImageId] = useState(
+    product.images.find((image) => image.primary).id 
+  );
 
   const handleImageClick = (id) => {
     setSelectedImageId(id);
-    onImageSelect(id); 
+    onImageSelect(id);
+    setActiveImageId(id);
   };
 
   const selectedImageSrc = product.images.find(
@@ -19,16 +23,28 @@ export default function BoxImgContent({ onImageSelect }) {
   return (
     <div className="flex flex-col-reverse lg:flex-row w-full gap-3">
       {/* Product Info */}
-      <div className="w-full lg:w-2/12">
-        <div className="flex flex-wrap gap-2 sm:gap-4 md:gap-6 lg:flex-col lg:gap-4">
+      <div className="w-full  lg:w-2/12">
+        <div className=" flex lg:hidden pb-3 items-center justify-center w-full gap-3">
+          {product.images.map((image) => (
+                <span
+                key={image.id}
+                alt={image.imageAlt}
+                className={`cursor-pointer rounded-full border p-1 w-[15px] h-[15px] ${
+                  image.id === activeImageId ? 'activeSpan' : 'bg-gray-300 border-gray-600'
+                }`}
+                onClick={() => handleImageClick(image.id)}
+              />
+          ))}
+        </div>
+        <div className="flex items-center justify-center flex-wrap gap-2 sm:gap-4 md:gap-6 lg:flex-col lg:gap-4">
           {product.images.map((image) => (
             <img
               key={image.id}
               src={image.imageSrc}
               alt={image.imageAlt}
               className={classNames(
-                "cursor-pointer",
-                "w-[100px] h-[100px]",
+                "cursor-pointer border border-gray-600 p-1",
+                "w-[50px] h-[50px]",
                 "sm:w-[100px] sm:h-[100px]",
                 "lg:w-auto lg:h-auto"
               )}

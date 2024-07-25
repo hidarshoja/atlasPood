@@ -4,9 +4,13 @@
 
 @font-face {
     font-family: 'ProximaNovaCond';
-    src: url('./assets/fonts/Fontspring-DEMO-proximanovacond-medium.otf') format('opentype');
+    src: url('./assets/fonts/ProximaNova-Regular.ttf') format('opentype');
   }
   
   body {
     font-family: 'ProximaNovaCond', sans-serif;
+  }
+
+  .activeSpan {
+    background-color: green;
   }
